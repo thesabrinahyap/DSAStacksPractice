@@ -3,6 +3,7 @@
 #include<stdbool.h>
 #include"StackArray.h"
 
+//displayStack is not yet done
 void initStack(Stack *S){
 	S->top = -1;
 }

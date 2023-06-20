@@ -14,4 +14,9 @@ void push(Stack *S, Data elem);
 void pop(Stack *S);
 Data peek(Stack S);
 void displayStack(Stack S);
-void visualizeStack(Stack S);
+void visualizeStack(Stack S){
+	Stack trav;
+	for(trav = S; trav != NULL; trav = trav->next){
+		printf("%d-> "trav->elems);
+	}
+}

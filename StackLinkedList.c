@@ -3,9 +3,13 @@
 #include<stdbool.h>
 #include"StackLinkedList.h"
 
-void initStack(Stack *S);
-bool isEmpty(Stack S);
-bool isFull(Stack S);
+void initStack(Stack *S){
+	*S = NULL;
+}
+bool isEmpty(Stack S){
+	return(S = NULL)? true: false;
+}
+
 void push(Stack *S, Data elem);
 void pop(Stack *S);
 Data peek(Stack S);

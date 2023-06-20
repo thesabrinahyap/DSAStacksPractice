@@ -6,14 +6,13 @@
 
 typedef int Data;
 
-typedef struct{
+typedef struct node{
 	Data elems;
-	int top;
-} Stack;
+	struct node *next;
+} NodeType, *Stack;
 
 void initStack(Stack *S);
 bool isEmpty(Stack S);
-bool isFull(Stack S);
 void push(Stack *S, Data elem);
 void pop(Stack *S);
 Data peek(Stack S);

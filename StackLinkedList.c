@@ -10,10 +10,38 @@ bool isEmpty(Stack S){
 	return(S = NULL)? true: false;
 }
 
-void push(Stack *S, Data elem);
-void pop(Stack *S);
-Data peek(Stack S);
-void displayStack(Stack S);
+void push(Stack *S, Data elem){
+	Stack temp;
+	temp = (Stack) malloc(sizeof(NodeType));
+	
+	temp->next = *S;
+	temp->elems = elem;
+	*S = temp;
+}
+void pop(Stack *S){
+	Stack temp;
+	
+	if(S!= NULL){
+		temp = *S;
+		*S = temp->next;
+		free(temp);
+	}
+}
+Data peek(Stack S){
+	return S->elems;
+}
+
+void displayStack(Stack S){
+	Stack temp;
+	initStack(&temp);
+	
+	while(isEmpty(*S) == 0){
+		printf("%d", peek(*S));
+		push(&temp, peek(*S));
+		pop(S);
+	}
+	pop(S);
+}
 void visualizeStack(Stack S){
 	Stack trav;
 	for(trav = S; trav != NULL; trav = trav->next){

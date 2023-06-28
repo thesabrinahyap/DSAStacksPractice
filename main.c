@@ -20,13 +20,17 @@ int main(int argc, char *argv[]) {
 	pop(&stack);
 	pop(&stack);
 	pop(&stack);
+	displayStack(stack);
 	visualizeStack(stack);
 	printf("\n\nTop of the stack: %d\n" , peek(stack));
 	printf("=============== ATTEMPTING TO MAKE STACK EMPTY ===============\n");
 	pop(&stack);
+	displayStack(stack);
 	visualizeStack(stack);	
 	pop(&stack);
-	visualizeStack(stack);	
+	displayStack(stack);
+	visualizeStack(stack);
+	displayStack(stack);	
 	pop(&stack);
 	visualizeStack(stack);	
 	printf("\n\nTop of the stack: %d" , peek(stack));

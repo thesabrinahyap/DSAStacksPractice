@@ -19,7 +19,7 @@ bool isFull(Stack S);
 void push(Stack *S, Data elem);
 void pop(Stack *S);
 Data peek(Stack S);
-//void displayStack(Stack S);
+void displayStack(Stack S);
 void visualizeStack(Stack S);
 
 #endif

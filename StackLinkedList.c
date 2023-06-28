@@ -33,18 +33,18 @@ Data peek(Stack S){
 
 void displayStack(Stack S){
 	Stack temp;
-	initStack(&temp);
+	initStackLinkedList(&temp);
 	
-	while(isEmpty(*S) == 0){
-		printf("%d", peek(*S));
-		push(&temp, peek(*S));
-		pop(S);
+	while(isEmpty(S) == 0){
+		printf("%d", peek(S));
+		push(&temp, peek(S));
+		pop(&S);
 	}
-	pop(S);
+	pop(&S);
 }
 void visualizeStack(Stack S){
 	Stack trav;
 	for(trav = S; trav != NULL; trav = trav->next){
-		printf("%d-> "trav->elems);
+		printf("%d\n", trav->elems);
 	}
 }
